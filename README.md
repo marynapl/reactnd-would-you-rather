@@ -1,4 +1,4 @@
-# Would you rather app
+# Would You Rather App
 
 This is a web app that lets a user play the "Would you rather?" game. The user is able to:
 
