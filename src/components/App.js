@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import { handleInitialData } from '../actions/shared'
 
-function App() {
-  return (
-    <div className="App">
-      This is my app
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    this.props.dispatch(handleInitialData())
+  }
+  render() {
+    return (
+      <Fragment>
+        <div className="grid-x">
+          <div className="cell">
+            {this.props.loading == true
+              ? null
+              : <p>This is my app</p>
+            }
+          </div>
+        </div>
+      </Fragment>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = ({ authedUser }) => {
+  return {
+    loading: authedUser === null
+  }
+}
+
+export default connect(mapStateToProps)(App);
