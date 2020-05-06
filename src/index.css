@@ -1,6 +1,27 @@
 header {
-  padding: 1.5rem;
-  /* border-bottom: 2px solid #aaa; */
+  padding: 1.5rem 0;
   box-shadow: 0 2px 6px rgba(10,10,10,.25);
   margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+select option[disabled="true"] { 
+  color: #eee; 
+}
+
+.text-right {
+  text-align: right;
+}
+
+@media (min-width: 40em){
+  .medium-text-right {
+    text-align: right;
+  }
+}
+
+.login-status a {
+  padding: .7rem 1rem;
 }

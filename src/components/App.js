@@ -7,6 +7,7 @@ import Dashboard from './Dashboard'
 import NewQuestion from './NewQuestion'
 import QustionPage from './QuestionPage'
 import LeaderBoard from './LeaderBoard'
+import Login from './Login'
 
 class App extends Component {
   componentDidMount() {
@@ -17,21 +18,23 @@ class App extends Component {
       <Router>
         <Fragment>
           <TopBanner />
-          <div className="grid-container">
-            <div className="grid-x align-center">
-              <div className="cell small-12 medium-10">
-                {this.props.loggedIn == true
-                  ? <p>Please log in</p>
-                  : <div>
-                      <Route path='/' exact component={Dashboard} />
-                      <Route path='/questions/:id' component={QustionPage} />
-                      <Route path='/add' component={NewQuestion} />
-                      <Route path='/leaderboard' component={LeaderBoard} />
-                    </div>
-                }
+          <main>
+            <div className="grid-container">
+              <div className="grid-x align-center">
+                <div className="cell small-12 medium-10">
+                  {this.props.loggedIn === true
+                    ? <Login />
+                    : <div>
+                        <Route path='/' exact component={Dashboard} />
+                        <Route path='/questions/:id' component={QustionPage} />
+                        <Route path='/add' component={NewQuestion} />
+                        <Route path='/leaderboard' component={LeaderBoard} />
+                      </div>
+                  }
+                </div>
               </div>
             </div>
-          </div>
+          </main>
         </Fragment>
       </Router>
 
