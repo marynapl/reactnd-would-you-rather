@@ -4,12 +4,38 @@ header {
   margin-bottom: 2rem;
 }
 
+/* Common */
+
 h1 {
   font-size: 1.5rem;
 }
 
-select option[disabled="true"] { 
-  color: #eee; 
+h2 {
+  font-size: 1.2rem;
+}
+
+.text-small {
+  font-size: 90%;
+}
+
+.text-large {
+  font-size: 110%;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-right {
@@ -20,6 +46,53 @@ select option[disabled="true"] {
   .medium-text-right {
     text-align: right;
   }
+}
+
+.padding-1x {
+  padding: 1rem;
+}
+
+.padding-horizontal-1x {
+  padding: 0 1rem;
+}
+
+.margin-1x {
+  margin: 1rem;
+} 
+
+.margin-horizontal-1x {
+  margin: 0 1rem;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.margin-bottom-half {
+  margin-bottom: .5rem;
+}
+
+.margin-bottom-1x {
+  margin-bottom: 1rem;
+}
+
+.border {
+  border: 1px solid #eee;
+}
+
+.border-horizontal {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #eee;
+}
+
+/* Login */
+
+select option[disabled="true"] { 
+  color: #eee; 
 }
 
 .login-status a {
