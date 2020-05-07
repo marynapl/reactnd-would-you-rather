@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setAutherUser } from '../actions/authedUser'
+import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
   state = {
@@ -21,7 +22,14 @@ class Login extends Component {
     dispatch(setAutherUser(selected))
   }
   render() {
-    const { users } = this.props
+    const { users, loggedIn } = this.props
+
+    if (loggedIn) {
+      return (
+        <Redirect to="/" />
+      )
+    } 
+     
     return (
       <div className="grid-x align-center">
         <div className="small-12 medium-8 large-7">
@@ -55,9 +63,10 @@ class Login extends Component {
   }
 }
 
-const mapStateToProps = ({ users }) => {
+const mapStateToProps = ({ users, authedUser }) => {
   return {
-    users
+    users,
+    loggedIn: authedUser !== null
   }
 }
 

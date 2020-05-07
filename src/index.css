@@ -103,6 +103,10 @@ h2 {
 
 /* Menu */
 
+.menu a {
+  border-bottom: 4px solid transparent;
+}
+
 .menu a.active {
   border-bottom: 4px solid currentColor;
 }
