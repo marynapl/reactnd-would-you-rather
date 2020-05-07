@@ -21,7 +21,7 @@ class App extends Component {
           <main>
             <div className="grid-container">
               <div className="grid-x align-center">
-                <div className="cell small-12 medium-10">
+                <div className="cell small-12 medium-10 large-8">
                   {this.props.loggedIn === true
                     ? <Login />
                     : <div>

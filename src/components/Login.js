@@ -24,7 +24,7 @@ class Login extends Component {
     const { users } = this.props
     return (
       <div className="grid-x align-center">
-        <div className="small-12 medium-8">
+        <div className="small-12 medium-8 large-7">
           <div className="callout text-center">
             <h1>Welcome to the Would You&nbsp;Rather&nbsp;App!</h1>
             <p>
@@ -42,13 +42,9 @@ class Login extends Component {
                       )
                     })
                   }
-
                 </select>
               </label>
-              <button
-                type="submit"
-                className="button expanded"
-              >
+              <button type="submit" className="button expanded margin-bottom-0">
                 Sign in
               </button>
             </form>
