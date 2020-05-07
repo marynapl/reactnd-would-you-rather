@@ -25,16 +25,16 @@ class Login extends Component {
     return (
       <div className="grid-x align-center">
         <div className="small-12 medium-8 large-7">
-          <div className="callout text-center">
-            <h1>Welcome to the Would You&nbsp;Rather&nbsp;App!</h1>
+          <div className="callout">
+            <h1 className=" text-center">Welcome to the Would You&nbsp;Rather&nbsp;App!</h1>
+            <hr />
             <p>
               Please sign in to continue
             </p>
-            <hr />
             <form onSubmit={this.handleSubmit}>
               <label><span className="show-for-sr">Select user</span>
-                <select defaultValue="" onChange={this.handleChange}>
-                  <option value="" disabled={true}></option>
+                <select required defaultValue="" onChange={this.handleChange}>
+                  <option value="" disabled={true}>Select a user</option>
                   {
                     Object.keys(users).map((key) => {
                       return (

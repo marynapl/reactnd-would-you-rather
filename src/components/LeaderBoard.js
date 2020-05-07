@@ -9,7 +9,7 @@ class LeaderBoard extends Component {
 
     return (
       <Fragment>
-        <h1>Leader Board</h1>
+        <h1>Leader board</h1>
         {
           users.map((user) => (
 
@@ -36,18 +36,6 @@ class LeaderBoard extends Component {
                       {user.createdQuestions}
                     </div>
                   </div>
-                  {/* <table className="unstriped text-small margin-bottom-0">
-                    <tbody>
-                      <tr>
-                        <th className="text-left text-normal">Answered questions</th>
-                        <td>{user.answeredQuestions}</td>
-                      </tr>
-                      <tr>
-                        <th className="text-left text-normal">Created questions</th>
-                        <td>{user.createdQuestions}</td>
-                      </tr>
-                    </tbody>
-                  </table> */}
                 </div>
                 <div className="cell auto">
                   <div className="card margin-bottom-0">

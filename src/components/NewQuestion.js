@@ -39,9 +39,10 @@ class NewQuestion extends Component {
                 <section>
                   <h2>Would you rather ...</h2>
                   <label><span className="show-for-sr">Option one</span>
-                    <input className="margin-bottom-0"
+                    <input required className="margin-bottom-0"
                       name="optionOne"
                       type="text"
+                      maxLength="250"
                       placeholder="Enter option one here"
                       onChange={this.handleChange}
                       value={this.state.optionOne}
@@ -53,9 +54,10 @@ class NewQuestion extends Component {
                     <div className="cell auto"><hr /></div>
                   </div>
                   <label><span className="show-for-sr">Option two</span>
-                    <input
+                    <input required
                       name="optionTwo"
                       type="text"
+                      maxLength="250"
                       placeholder="Enter option two here"
                       onChange={this.handleChange}
                       value={this.state.optionTwo}

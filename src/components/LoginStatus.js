@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { setAutherUser } from '../actions/authedUser'
+import { Link } from 'react-router-dom'
 
 class LoginStatus extends Component {
   handleChange = (e) => {
@@ -17,7 +18,7 @@ class LoginStatus extends Component {
           ? null
           : <div className="login-status">
               Hello, { user.name } 
-              <a href="#" onClick={this.handleChange}>Logout</a>
+              <Link to="" onClick={this.handleChange}>Logout</Link>
             </div>
         }
       </Fragment>

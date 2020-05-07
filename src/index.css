@@ -48,6 +48,10 @@ h2 {
   }
 }
 
+.padding-0 {
+  padding: 0;
+}
+
 .padding-1x {
   padding: 1rem;
 }
@@ -68,6 +72,10 @@ h2 {
   margin-bottom: 0;
 }
 
+.margin-bottom-1x {
+  margin-bottom: 1rem;
+}
+
 .margin-bottom-half {
   margin-bottom: .5rem;
 }
@@ -85,14 +93,31 @@ h2 {
   border-right: 1px solid #eee;
 }
 
+.border-top {
+  border-top: 1px solid #eee;
+}
+
 .border-bottom {
   border-bottom: 1px solid #eee;
 }
 
-/* Login */
+/* Menu */
 
-select option[disabled="true"] { 
-  color: #eee; 
+.menu a.active {
+  border-bottom: 4px solid currentColor;
+}
+
+/* Forms */
+
+::placeholder { 
+  color: #aaa;
+}
+
+select:invalid {
+  color: #aaa;
+}
+option[value=""][disabled] {
+  display: none;
 }
 
 .login-status a {
