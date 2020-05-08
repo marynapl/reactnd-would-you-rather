@@ -10,13 +10,13 @@ class PageNotFound extends Component {
             <h1 className="text-center">Page not found</h1>
             <hr />
             <p>
-              The link you followed may be broken or the page 
+              The link you followed may be broken or the page
               may have been removed.
             </p>
             <p>
               <Link to="/">
-                Visit our Home page 
-                <img alt="" src="/images/chevron_right.svg"/>
+                Visit our Home page
+                <img alt="" src="/images/chevron_right.svg" />
               </Link>
             </p>
           </div>

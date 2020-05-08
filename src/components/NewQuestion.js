@@ -33,7 +33,7 @@ class NewQuestion extends Component {
   render() {
     const { optionOne, optionTwo, toDashboard } = this.state
 
-    if(toDashboard) {
+    if (toDashboard) {
       return (
         <Redirect to="/" />
       )

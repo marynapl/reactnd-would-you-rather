@@ -17,7 +17,8 @@ class LoginStatus extends Component {
         {loggedIn === false
           ? null
           : <div className="login-status">
-              Hello, { user.name } 
+              <img className="avatar" src={user.avatarURL} alt="user avatar" />
+              {user.name}
               <Link to="" onClick={this.handleChange}>Logout</Link>
             </div>
         }
@@ -30,7 +31,7 @@ const mapStateToProps = ({ authedUser, users }) => {
   const user = users[authedUser]
   return {
     loggedIn: authedUser !== null,
-    user 
+    user
   }
 }
 

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import QuestionCard from './QuestionCard'
 
 class Dashboard extends Component {
-  state = { 
-    hasAnswered: false 
+  state = {
+    hasAnswered: false
   }
   handleChange = (hasAnswered) => {
     this.setState(() => ({
@@ -37,11 +37,11 @@ class Dashboard extends Component {
         </div>
 
         {this.props.questions.map((question) => {
-            return (
-              question.isAnswered !== hasAnswered
+          return (
+            question.isAnswered !== hasAnswered
               ? null
               : <QuestionCard key={question.id} id={question.id}></QuestionCard>
-            )
+          )
         })}
 
       </Fragment>
@@ -51,12 +51,12 @@ class Dashboard extends Component {
 
 const mapStateToProps = ({ authedUser, users, questions }) => {
   const categorizedQuestions = Object.keys(questions)
-  .sort((a,b) => questions[b].timestamp - questions[a].timestamp)
-  .map((key) => ({
-    id: questions[key].id,
-    isAnswered: users[authedUser].answers.hasOwnProperty(key)
-  }))
-  
+    .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
+    .map((key) => ({
+      id: questions[key].id,
+      isAnswered: users[authedUser].answers.hasOwnProperty(key)
+    }))
+
   return {
     questions: categorizedQuestions
   }

@@ -113,6 +113,10 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
+.border-left {
+  border-left: 1px solid #eee;
+}
+
 /* Menu */
 
 .menu a {
@@ -146,10 +150,19 @@ option[value=""][disabled] {
   padding: .7rem 1rem;
 }
 
+.login-status .avatar {
+  max-width: 2rem;
+  margin-right: 1rem;
+}
+
 @media (min-width: 40em){
   .login-status {
     margin-bottom: 0;
   }
+}
+
+.avatar {
+  max-width: 7.5rem;
 }
 
 .question-badge {

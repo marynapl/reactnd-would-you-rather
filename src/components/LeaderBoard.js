@@ -14,10 +14,10 @@ class LeaderBoard extends Component {
           users.map((user) => (
             <div key={user.id} className="callout">
               <div className="grid-x">
-                <div className="cell auto">
-                  Avatar
+                <div className="cell auto text-center">
+                  <img className="avatar" src={user.avatarURL} alt="avatar" />
                 </div>
-                <div className="cell small-7 margin-horizontal-1x padding-horizontal-1x border-horizontal">
+                <div className="cell small-6 margin-horizontal-1x padding-horizontal-1x border-horizontal">
                   <h2 className="text-bold margin-bottom-1x">{user.name}</h2>
                   <div className="grid-x grid-margin-x align-middle text-small margin-bottom-half">
                     <div className="cell auto">

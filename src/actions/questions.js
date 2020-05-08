@@ -21,8 +21,8 @@ export function addQuestion(question) {
 export function answerQuestion({ authedUser, qid, answer }) {
   return {
     type: ANSWER_QUESTION,
-    authedUser, 
-    qid, 
+    authedUser,
+    qid,
     answer
   }
 }
@@ -31,10 +31,10 @@ export function handleAddQuestion(optionOneText, optionTwoText) {
   return (dispatch, getState) => {
     const { authedUser } = getState()
     return saveQuestion({
-        optionOneText,
-        optionTwoText,
-        author: authedUser
-      })
+      optionOneText,
+      optionTwoText,
+      author: authedUser
+    })
       .then((question) => {
         dispatch(addQuestion(question))
       })
@@ -45,10 +45,10 @@ export function handleAnswerQuestion(qid, answer) {
   return (dispatch, getState) => {
     const { authedUser } = getState()
     return saveQuestionAnswer({
-        authedUser,
-        qid,
-        answer
-      })
+      authedUser,
+      qid,
+      answer
+    })
       .then(() => {
         dispatch(answerQuestion({
           authedUser,

@@ -28,6 +28,9 @@ There are two types of objects stored in our database:
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+## Credit
+<a href="https://iconscout.com/icons/avatar" target="_blank">Avatar Icon</a> by <a href="https://iconscout.com/contributors/dmitriy-bondarchuk" target="_blank">Dmitriy Bondarchuk</a>
+
 ## Contributing
 
 Pull requests are not accepted.

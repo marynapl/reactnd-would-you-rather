@@ -6,7 +6,7 @@ export function formatUser (user) {
   return {
     name,
     id,
-    avatar: avatarURL,
+    avatarURL,
     answeredQuestions: answeredQuestions,
     createdQuestions: createdQuestions,
     totalQuestions: answeredQuestions + createdQuestions

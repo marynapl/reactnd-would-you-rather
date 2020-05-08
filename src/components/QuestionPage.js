@@ -5,7 +5,7 @@ import QuestionResult from './QuestionResult'
 
 class QuestionPage extends Component {
   render() {
-    const { id, author, isAnswered } = this.props
+    const { id, author, isAnswered, avatarURL } = this.props
 
     return (
       <Fragment>
@@ -20,10 +20,10 @@ class QuestionPage extends Component {
           </div>
           <div className="card-section">
             <div className="grid-x">
-              <div className="cell small-3">
-                Avatar
-            </div>
               <div className="cell auto">
+                <img src={avatarURL} className="avatar" alt="avatar" />
+              </div>
+              <div className="cell small-9 padding-horizontal-1x margin-horizontal-1x border-left">
                 {
                   isAnswered
                     ? <QuestionResult id={id} />

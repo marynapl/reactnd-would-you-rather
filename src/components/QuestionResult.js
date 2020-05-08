@@ -8,8 +8,8 @@ class QuestionResult extends Component {
     const optionOneAnswers = question.optionOne.votes.length
     const optionTwoAnswers = question.optionTwo.votes.length
     const totalAnswers = optionOneAnswers + optionTwoAnswers
-    const optionOnePercent = (optionOneAnswers / totalAnswers) * 100
-    const optionTwoPercent = (optionTwoAnswers / totalAnswers) * 100
+    const optionOnePercent = ((optionOneAnswers / totalAnswers) * 100).toFixed(0)
+    const optionTwoPercent = ((optionTwoAnswers / totalAnswers) * 100).toFixed(0)
 
     // TODO: there is an opportunity to create a separate QuestionResultOption component
 

@@ -12,10 +12,10 @@ class QuestionCard extends Component {
         </div>
         <div className="card-section">
           <div className="grid-x">
-            <div className="cell small-3">
-              Avatar
+            <div className="cell auto text-center">
+              <img className="avatar" src={avatarURL} alt="avatar" />
             </div>
-            <div className="cell auto">
+            <div className="cell small-9 padding-horizontal-1x margin-horizontal-1x border-left">
               <p className="text-bold">Would you rather</p>
               <p>&hellip;{summary}&hellip;</p>
               <Link to={`/questions/${id}`} className="button small hollow margin-bottom-0">View poll</Link>

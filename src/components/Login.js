@@ -28,8 +28,8 @@ class Login extends Component {
       return (
         <Redirect to="/" />
       )
-    } 
-     
+    }
+
     return (
       <div className="grid-x align-center">
         <div className="small-12 medium-8 large-7">
@@ -46,7 +46,9 @@ class Login extends Component {
                   {
                     Object.keys(users).map((key) => {
                       return (
-                        <option key={key} value={key}>{users[key].name}</option>
+                        <option key={key} value={key}>
+                          {users[key].name}
+                        </option>
                       )
                     })
                   }

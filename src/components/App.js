@@ -31,7 +31,6 @@ class App extends Component {
                     <PrivateRoute loggedIn={loggedIn} path='/questions/:id' component={QuestionPage} />
                     <PrivateRoute loggedIn={loggedIn} path='/add' component={NewQuestion} />
                     <PrivateRoute loggedIn={loggedIn} path='/leaderboard' component={LeaderBoard} />
-
                     <Route path='' component={PageNotFound} />
                   </Switch>
                 </div>
