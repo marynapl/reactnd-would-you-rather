@@ -151,3 +151,16 @@ option[value=""][disabled] {
     margin-bottom: 0;
   }
 }
+
+.question-badge {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: .8rem;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    font-size: .8rem;
+}
+
