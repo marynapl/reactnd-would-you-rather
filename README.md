@@ -8,7 +8,7 @@ This is a web app that lets a user play the "Would you rather?" game. The user i
 * see how other users have voted
 * see the ranking of users on the leaderboard
 
-## TL;DR
+## Setup
 
 To get started:
 
