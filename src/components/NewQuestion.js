@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { handleAddQuestion } from '../actions/questions'
+import { Redirect } from 'react-router-dom'
 
 class NewQuestion extends Component {
   state = {
     optionOne: '',
-    optionTwo: ''
+    optionTwo: '',
+    toDashboard: false
   }
   handleChange = (e) => {
     const name = e.target.name
@@ -24,10 +26,19 @@ class NewQuestion extends Component {
 
     this.setState(() => ({
       optionOne: '',
-      optionTwo: ''
+      optionTwo: '',
+      toDashboard: true
     }))
   }
   render() {
+    const { optionOne, optionTwo, toDashboard } = this.state
+
+    if(toDashboard) {
+      return (
+        <Redirect to="/" />
+      )
+    }
+
     return (
       <Fragment>
         <div className="grid-x align-center">
@@ -45,7 +56,7 @@ class NewQuestion extends Component {
                       maxLength="250"
                       placeholder="Enter option one here"
                       onChange={this.handleChange}
-                      value={this.state.optionOne}
+                      value={optionOne}
                     />
                   </label>
                   <div className="grid-x align-middle grid-margin-x">
@@ -60,7 +71,7 @@ class NewQuestion extends Component {
                       maxLength="250"
                       placeholder="Enter option two here"
                       onChange={this.handleChange}
-                      value={this.state.optionTwo}
+                      value={optionTwo}
                     />
                   </label>
                   <button type="submit" className="button expanded margin-bottom-0">

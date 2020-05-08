@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-class QuestionSummary extends Component {
+class QuestionCard extends Component {
   render() {
     const { id, author, avatarURL, summary } = this.props
     return (
       <div className="card">
         <div className="card-divider">
-          <h2><span className="text-bold">{author}</span> asks:</h2>
+          <p className="margin-bottom-0"><strong>{author}</strong> asks:</p>
         </div>
         <div className="card-section">
           <div className="grid-x">
@@ -40,4 +40,4 @@ const mapStateToProps = ({ users, questions }, { id }) => {
   }
 }
 
-export default connect(mapStateToProps)(QuestionSummary)
+export default connect(mapStateToProps)(QuestionCard)

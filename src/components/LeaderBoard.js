@@ -9,10 +9,9 @@ class LeaderBoard extends Component {
 
     return (
       <Fragment>
-        <h1>Leader board</h1>
+        <h1 className="show-for-sr">Leader board</h1>
         {
           users.map((user) => (
-
             <div key={user.id} className="callout">
               <div className="grid-x">
                 <div className="cell auto">

@@ -7,7 +7,7 @@ export default function TopBanner() {
     <header>
       <div className="grid-container">
         <div className="grid-x align-middle">
-        <div className="cell small-12 medium-5 medium-order-2 medium-text-right">
+        <div className="cell small-12 medium-5 medium-order-2 text-right">
             <LoginStatus />
           </div>
           <div className="cell small-12 medium-7 medium-order-1">

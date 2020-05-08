@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import QuestionSummary from './QuestionSummary'
+import QuestionCard from './QuestionCard'
 
 class Dashboard extends Component {
   state = { 
@@ -16,7 +16,7 @@ class Dashboard extends Component {
     const { hasAnswered } = this.state
     return (
       <Fragment>
-        <h1>Dashboard</h1>
+        <h1 className="show-for-sr">Dashboard</h1>
         <div className="border-bottom margin-bottom-1x">
           <ul className="menu expanded text-center text-small">
             <li>
@@ -40,7 +40,7 @@ class Dashboard extends Component {
             return (
               question.isAnswered !== hasAnswered
               ? null
-              : <QuestionSummary key={question.id} id={question.id}></QuestionSummary>
+              : <QuestionCard key={question.id} id={question.id}></QuestionCard>
             )
         })}
 
@@ -50,7 +50,9 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = ({ authedUser, users, questions }) => {
-  const categorizedQuestions = Object.keys(questions).map((key) => ({
+  const categorizedQuestions = Object.keys(questions)
+  .sort((a,b) => questions[b].timestamp - questions[a].timestamp)
+  .map((key) => ({
     id: questions[key].id,
     isAnswered: users[authedUser].answers.hasOwnProperty(key)
   }))

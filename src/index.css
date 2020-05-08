@@ -72,6 +72,18 @@ h2 {
   margin-bottom: 0;
 }
 
+@media (min-width: 40em){
+  .medium-margin-bottom-0 {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 64em){
+  .large-margin-bottom-0 {
+    margin-bottom: 0;
+  }
+}
+
 .margin-bottom-1x {
   margin-bottom: 1rem;
 }
@@ -124,6 +136,18 @@ option[value=""][disabled] {
   display: none;
 }
 
+/* Login status */
+
+.login-status {
+  margin-bottom: 1rem;
+}
+
 .login-status a {
   padding: .7rem 1rem;
+}
+
+@media (min-width: 40em){
+  .login-status {
+    margin-bottom: 0;
+  }
 }
